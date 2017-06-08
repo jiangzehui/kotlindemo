@@ -16,8 +16,9 @@ class MainActivity : AppCompatActivity() {
         tv.textSize = 20f
         tv.setTextColor(Color.GREEN)
         tv.setOnClickListener {
-            printWord(returnWord("returnword"))
-
+            //testFun(testIs(1))
+            //testFor()
+            testWhile()
         }
 
     }
@@ -25,25 +26,54 @@ class MainActivity : AppCompatActivity() {
     /**
      * 函数
      */
-    fun printWord(word: String) {
+    fun testFun(word: String) {
         Toast.makeText(this, word, Toast.LENGTH_SHORT).show()
     }
 
-    fun returnWord(word: Any): String {
+    fun testIs(word: Any): String {
 
-        if(word is String){//判断类型是否是String
+        if (word is String) {//判断类型是否是String
             return word
-        }else{
+        } else {
             return "no string"
         }
 
     }
 
+
+    var item = listOf("item1", "item2", "item3")
     /**
-     * 循环
+     * for循环
      */
-    fun printFor(){
-        var item = listOf("item1","item2","item3")
+    fun testFor() {
+
+        for (index in item.indices) {//类似java的for循环
+            Toast.makeText(this, item[index], Toast.LENGTH_SHORT).show()
+        }
+
+
+        for (index in item) {//类似java的foreach
+            Toast.makeText(this, index, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    /**
+     * while循环
+     */
+    fun testWhile(){
+        var index = 0;
+        while(index<item.size){
+            Toast.makeText(this, item[index], Toast.LENGTH_SHORT).show()
+            index++
+        }
+
+        var isbool = true
+        while(isbool){
+            isbool = false
+            Toast.makeText(this, "isbool", Toast.LENGTH_SHORT).show()
+
+        }
+
 
     }
 
