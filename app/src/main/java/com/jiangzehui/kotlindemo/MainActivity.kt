@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         tv.setTextColor(Color.GREEN)
         tv.setOnClickListener {
             //testFun(testIs(1))
-            //testFor()
-            testWhile()
+            testFor()
+            //testWhile()
         }
 
     }
@@ -47,14 +47,18 @@ class MainActivity : AppCompatActivity() {
      */
     fun testFor() {
 
-        for (index in item.indices) {//类似java的for循环
+//        for (index in item.indices) {//类似java的for循环
+//            Toast.makeText(this, item[index], Toast.LENGTH_SHORT).show()
+//        }
+
+        for (index in  0..item.size-1) {//类似java的for循环
             Toast.makeText(this, item[index], Toast.LENGTH_SHORT).show()
         }
 
 
-        for (index in item) {//类似java的foreach
-            Toast.makeText(this, index, Toast.LENGTH_SHORT).show()
-        }
+//        for (index in item) {//类似java的foreach
+//            Toast.makeText(this, index, Toast.LENGTH_SHORT).show()
+//        }
     }
 
     /**
