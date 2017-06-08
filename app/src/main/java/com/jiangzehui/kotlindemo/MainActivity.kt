@@ -1,5 +1,6 @@
 package com.jiangzehui.kotlindemo
 
+import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -17,8 +18,12 @@ class MainActivity : AppCompatActivity() {
         tv.setTextColor(Color.GREEN)
         tv.setOnClickListener {
             //testFun(testIs(1))
-            testFor()
+            //testFor()
             //testWhile()
+            var intent:Intent= Intent(this,Main2Activity::class.java)
+            intent.putExtra("value","江泽辉")
+            startActivity(intent)
+
         }
 
     }
