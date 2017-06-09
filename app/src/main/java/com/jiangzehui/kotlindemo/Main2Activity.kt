@@ -14,13 +14,12 @@ class Main2Activity : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
         province = intent.getStringExtra("province")
         city = intent.getStringExtra("city")
-        tv.text = province + "----" + city
         getWeather()
     }
 
 
     /**
-     * 网络请求
+     * 根据城市获取天气预告
      */
     fun getWeather() {
         Fuel.get("http://apicloud.mob.com/v1/weather/query?key=1e501124818b4&province=" + province + "&city=" + city).responseString { request, response, result ->
