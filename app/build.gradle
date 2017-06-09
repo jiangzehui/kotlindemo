@@ -29,6 +29,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'com.github.kittinunf.fuel:fuel:1.7.0'
+    compile 'com.github.kittinunf.fuel:fuel-android:1.7.0'
+    compile 'com.google.code.gson:gson:2.8.1'
 }
 repositories {
     mavenCentral()
